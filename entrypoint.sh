@@ -3,7 +3,7 @@
 file=$1
 
 check_versions() {
-    git diff origin/master ${file} | grep version
+    git diff origin/main ${file} | grep version
 }
 
 version_changed=`check_versions | wc -l | tr -d '[:space:]'`
